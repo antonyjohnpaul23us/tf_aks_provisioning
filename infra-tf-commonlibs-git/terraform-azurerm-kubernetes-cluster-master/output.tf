@@ -19,3 +19,10 @@ output "kube_config" {
   description = "kubeconfig for kubectl access."
   sensitive   = true
 }
+output "kubernetes_cluster_name" {
+  value = azurerm_kubernetes_cluster.cluster.name
+}
+
+output "kubernetes_cluster_resource_group_name" {
+  value = azurerm_kubernetes_cluster.cluster.resource_group_name
+}

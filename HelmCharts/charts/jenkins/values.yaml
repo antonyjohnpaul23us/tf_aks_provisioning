@@ -233,6 +233,7 @@ controller:
     - workflow-aggregator:2.6
     - git:4.9.0
     - configuration-as-code:1.53
+    - job-dsl:1.78.1
 
   # Set to false to download the minimum required version of all dependencies.
   installLatestPlugins: true
@@ -433,11 +434,11 @@ controller:
     # Set this path to jenkinsUriPrefix above or use annotations to rewrite path
     path: "/jenkins"
     # configures the hostname e.g. jenkins.example.com
-    hostName: ajpaks.eastus.cloudapp.azure.com
+    hostName: ajp-aks-bb.eastus.cloudapp.azure.com
     tls:
     - secretName: jenkins.tls-secret
       hosts:
-        - ajpaks.eastus.cloudapp.azure.com
+        - ajp-aks-bb.eastus.cloudapp.azure.com
 
   # often you want to have your controller all locked down and private
   # but you still want to get webhooks from your SCM
