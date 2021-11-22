@@ -234,6 +234,7 @@ controller:
     - git:4.9.0
     - configuration-as-code:1.53
     - job-dsl:1.78.1
+    - role-strategy:3.2.0
 
   # Set to false to download the minimum required version of all dependencies.
   installLatestPlugins: true
