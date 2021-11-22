@@ -10,11 +10,11 @@ Application of Interest: https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/
 2) Terraform cli installed locally.
 3) A service principal that will be used by terraform
 4) The below environment variables need to be set before running the terraform scripts 
--- aks_sp_tenant  ----  The Azure Service Principal's Tenant ID
--- aks_sp_uid  -----  The Azure Service Principal's Client ID
--- aks_sp_pwd  ----  The Azure Service Principal's Tenant ID
--- aks_sp_tenant  ----  Docker Hub's access Token for Pushing containers from Jenkins
--- jenkins_admin_password  ----  Jenkins admin password to set
+- aks_sp_tenant  ----  The Azure Service Principal's Tenant ID
+- aks_sp_uid  -----  The Azure Service Principal's Client ID
+- aks_sp_pwd  ----  The Azure Service Principal's Tenant ID
+- aks_sp_tenant  ----  Docker Hub's access Token for Pushing containers from Jenkins
+- jenkins_admin_password  ----  Jenkins admin password to set
 
 To build the environment and deploy jenkins, the [tf_create_infra.sh](https://github.com/antonyjohnpaul23us/tf_aks_provisioning/blob/feature1/aks-cluster-creation/tf_create_infra.sh) file can be executed after setting the environment variables.
 ## Navigating the Repo:
