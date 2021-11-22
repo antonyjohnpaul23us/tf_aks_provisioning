@@ -22,9 +22,9 @@ To build the environment and deploy jenkins, the [tf_create_infra.sh](https://gi
 
 ### Terraform Root Modules
 The provisioning terraform script consists of three blocks ([tf_create_infra.sh](https://github.com/antonyjohnpaul23us/tf_aks_provisioning/blob/feature1/aks-cluster-creation/tf_create_infra.sh)):
-    - Creation of AKS and it's dependent Azure Infrastructure Resources
-    - Creation of namespaces, nginx ingress and cert manager to secure ingress endpoints
-    - Deployment of ClusterIssuer CRD and configuring ACME server URL to Let's encrypt Production certificated for auto-generating tls certificates.
+- Creation of AKS and it's dependent Azure Infrastructure Resources
+- Creation of namespaces, nginx ingress and cert manager to secure ingress endpoints
+- Deployment of ClusterIssuer CRD and configuring ACME server URL to Let's encrypt Production certificated for auto-generating tls certificates.
 The [tf_create_infra.sh](https://github.com/antonyjohnpaul23us/tf_aks_provisioning/blob/feature1/aks-cluster-creation/tf_create_infra.sh) file can be used to create the infrastructure once the prerequisite environment variables are set
 
 __Note__: Parameterization has been cone to support the immediate requirement but can be scaled put. If this needs to be deployed into a different environment, ensure that the name / dns_name / resource_group are updated in the samplevars.tfvars or in the shell script as cli arguments to overwrite the defaults.
