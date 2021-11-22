@@ -20,7 +20,7 @@ To build the environment and deploy jenkins, the [tf_create_infra.sh](https://gi
 ## Navigating the Repo:
 #
 
-##### Terraform Root Modules
+### Terraform Root Modules
 The provisioning terraform script consists of three blocks ([tf_create_infra.sh](https://github.com/antonyjohnpaul23us/tf_aks_provisioning/blob/feature1/aks-cluster-creation/tf_create_infra.sh)):
     - Creation of AKS and it's dependent Azure Infrastructure Resources
     - Creation of namespaces, nginx ingress and cert manager to secure ingress endpoints
@@ -29,11 +29,11 @@ The [tf_create_infra.sh](https://github.com/antonyjohnpaul23us/tf_aks_provisioni
 
 __Note__: Parameterization has been cone to support the immediate requirement but can be scaled put. If this needs to be deployed into a different environment, ensure that the name / dns_name / resource_group are updated in the samplevars.tfvars or in the shell script as cli arguments to overwrite the defaults.
 
-##### Terraform Scripts
+### Terraform Scripts
 The terraform logic is largely encapsulated within a modules section that enables further enhancement and consumption across business verticals and reusability based on the need for AKS or other cloud Infrastructures. Publicly available helm charts have been modified to cater the present need and hence stored in the location([infra-tf-commonlibs-git](https://github.com/antonyjohnpaul23us/tf_aks_provisioning/tree/feature1/infra-tf-commonlibs-git)).
 
 __Note:__ Cluster resources in AKS cannot be immediately deployed into the cluster as soon as it is created as it will take a few minutes to be fully functions. time_sleep resources have been embedded in the terraform script as required.
-##### Helm Charts
+### Helm Charts
 Helm charts have been used to install/deploy the following components in the Kubernetes Cluster
     - nginx Ingress Controller
     - cert-manager
